@@ -39,7 +39,7 @@ void stop_car(struct Car car){//stop the vehicle
 
 void move_car_left(struct Car car){//moves the car left
 	digitalWrite(car.left_pin_0,LOW);
-	digitalWrite(car.left_pin_1,HIGH);
+	digitalWrite(car.left_pin_1,LOW);
 	digitalWrite(car.right_pin_0,HIGH);
 	digitalWrite(car.right_pin_1,LOW);
 	return;
@@ -49,7 +49,7 @@ void move_car_right(struct Car car){// moves the car right
 	digitalWrite(car.left_pin_0,HIGH);
 	digitalWrite(car.left_pin_1,LOW);
 	digitalWrite(car.right_pin_0,LOW);
-	digitalWrite(car.right_pin_1,HIGH);
+	digitalWrite(car.right_pin_1,LOW);
 	return;
 }
 
