@@ -6,6 +6,17 @@
 // this makes use of the wiringPi interface for GPIO control
 // found at http://wiringpi.com/download-and-install/
 // you must run your c program by linking to the object car_api.o file and compile with -lwiringPi
+
+#if  defined __has_include
+#if __has_include ("pins.h")
+#include "pins.h"
+#else
+#define PINS_DEFAULT {0,2,3,4}
+#endif
+#else
+#define PINS_DEFAULT {0,2,3,4}
+#endif
+
 struct Car{
 	int left_pin_0;
 	int left_pin_1;
