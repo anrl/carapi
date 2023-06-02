@@ -31,6 +31,9 @@ struct Car{
 	float angular_velocity;//degrees the car turns per unit time
 
 };
+
+struct Car setup_default_car();//setup a car with PINS_DEFAULT values
+
 struct Car setup_new_car(int lp0,int lp1,int rp0,int rp1);//create a new car and specify corresponding WIRINGPi Pin numbers (NOTE THAT THIS IS DIFFERENT FROM BOTH BCM AND PIN NUMBERS).
 //WIRING PI PIN NUMBERS ARE FOUND HERE: https://pinout.xyz/ Hover over the corresponding pin with the mouse to find the WIRING PI Numbers
 

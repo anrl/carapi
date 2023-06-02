@@ -5,6 +5,10 @@
 
 struct timeval start_time,stop_time;
 
+struct Car setup_default_car(){
+    return setup_new_car(PINS_DEFAULT[0], PINS_DEFAULT[1], PINS_DEFAULT[2], PINS_DEFAULT[3]);
+}
+
 struct Car setup_new_car(int lp0,int lp1,int rp0,int rp1){//specify which pins correspond to which side of the car
 	struct Car new_car;
 	new_car.left_pin_0=lp0;
