@@ -1,5 +1,5 @@
-all: ../../car_api.o pin_permute.o
-	gcc -Wall pin_permute.o ../../car_api.o -lwiringPi
+all: pin_permute.o
+	gcc -Wall pin_permute.o -lwiringPi
 
 pin_permute.o: pin_permute.c
 	gcc -c pin_permute.c
