@@ -10,10 +10,10 @@
 #if __has_include ("pins.h")
 #include "pins.h"
 #else
-#define PINS_DEFAULT {0,2,3,4}
+#define PINS_DEFAULT 0,2,3,4
 #endif
 #else
-#define PINS_DEFAULT {0,2,3,4}
+#define PINS_DEFAULT 0,2,3,4
 #endif
 
 struct Car{
@@ -45,7 +45,7 @@ struct Car setup_new_car(int lp0,int lp1,int rp0,int rp1){//specify which pins c
 }
 
 struct Car setup_default_car(){
-    return setup_new_car(PINS_DEFAULT[0], PINS_DEFAULT[1], PINS_DEFAULT[2], PINS_DEFAULT[3]);
+    return setup_new_car(PINS_DEFAULT);
 }
 
 void move_car_fwd(struct Car car){//moves the car forward at max motor speed

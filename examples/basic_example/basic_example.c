@@ -3,7 +3,7 @@
 
 
 int main(int argc, char *argv[]){
-  int pins[4]=PINS_DEFAULT;
+  int pins[4]={PINS_DEFAULT};
 
   printf("[%d %d %d %d]\n",pins[0],pins[1],pins[2],pins[3]);
   struct Car new_car= setup_new_car(pins[0],pins[1],pins[2],pins[3]); //WiringPi NUMBERS, NOT BCM/PIN NUMBER
