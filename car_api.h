@@ -8,7 +8,7 @@
 #define PINS_DEFAULT 0,2,3,4
 #endif
 
-#if defined __had_include
+#if defined __has_include
 #if __has_include (<wiringPi.h>)
 #include <wiringPi.h>
 #else
@@ -37,6 +37,8 @@ struct Car setup_new_car(int lp0,int lp1,int rp0,int rp1){//specify which pins c
   pinMode(lp1,OUTPUT);
   pinMode(rp0,OUTPUT);
   pinMode(rp1,OUTPUT);
+#else
+  printf("Mocking WiringPI\n");
 #endif
   return new_car;
 }
